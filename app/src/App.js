@@ -15,9 +15,7 @@ class  App extends React.Component {
     this.state = {
       users:[],
       id:id,
-      Name:'',
-      Email:'',
-      Password:'',
+      
       errors: {
         Name: '',
         me:'',
