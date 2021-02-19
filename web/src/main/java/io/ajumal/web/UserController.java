@@ -34,20 +34,6 @@ public class UserController {
     public User postMethodName(@RequestBody User user) {
         return userRepository.save(user);
     }
-    @PutMapping("/")
-    public User PutMapping(@RequestBody User newUser) {
-        User oldUser = userRepository.findById(newUser.getId()).orElse(null);
-        oldUser.setName(newUser.getName());
-        oldUser.setDate(newUser.getDate());
-        oldUser.setRoom(newUser.getRoom());
-        oldUser.setDivision(newUser.getDivision());
-        oldUser.setGender(newUser.getGender());
-        userRepository.save(oldUser);
-        return oldUser;
-    }
-    @DeleteMapping("/{id}")
-    public String DeleteUser(@PathVariable String id) {
-        userRepository.deleteById(id);
-        return id;
-    }
+    
+    
 }
