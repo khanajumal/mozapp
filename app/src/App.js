@@ -68,7 +68,7 @@ class  App extends React.Component {
           division:this.state.division,
           gender:this.state.gender
 
-        }).then(this.getdata())
+        }).then(()=>this.getdata())
         console.log("valid form")
         alert('Student ID='+id+"\r\n"+
         'Student Name='+this.state.name+"\r\n"+
