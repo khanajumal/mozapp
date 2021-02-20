@@ -131,10 +131,10 @@ handleChange = (event) => {
 
   render(){
     const {errors} = this.state;
-    var n = new Date(); 
-        var y = n.getFullYear(); 
-        var m = n.getMonth()+1; 
-        var d = n.getDate(); 
+    const n = new Date(); 
+    const y = n.getFullYear(); 
+    const m = n.getMonth()+1; 
+    const d = n.getDate(); 
     return (
       <div className="container">
           <div className="row">
