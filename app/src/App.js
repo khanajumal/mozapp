@@ -131,6 +131,10 @@ handleChange = (event) => {
 
   render(){
     const {errors} = this.state;
+    var n = new Date(); 
+        var y = n.getFullYear(); 
+        var m = n.getMonth()+1; 
+        var d = n.getDate(); 
     return (
       <div className="container">
           <div className="row">
@@ -148,7 +152,7 @@ handleChange = (event) => {
 
                   <div className="input-field col s12">
                   <i className="material-icons prefix">date_range</i>
-                  <input value={this.state.date}  id="autocomplete-input" name='date' onChange={(e)=>this.setState({date:e.target.value})} onInput={this.handleChange} type="date" className="autocomplete"></input>
+                  <input value={this.state.date}  id="autocomplete-input" name='date' onChange={(e)=>this.setState({date:e.target.value})} onInput={this.handleChange} type="date" max={ y.toString().padStart(4, 0)+"-"+m.toString().padStart(2, 0)+"-"+d.toString().padStart(2, 0)} className="autocomplete"></input>
                   {errors.me.length > 0 && 
                 <span className='error'>{errors.me}</span>}
                   </div>
