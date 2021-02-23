@@ -222,7 +222,7 @@ handleChange = (event) => {
                   </button>
                  </form>
                  </div> 
-          <div className="col s6">
+          <div className="col-sm-6">
           <table>
         <thead>
           <tr>
