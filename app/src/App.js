@@ -157,7 +157,7 @@ handleChange = (event) => {
                 <span className='error'>{errors.me}</span>}
                   </div>
                  
-                  <div class="row green-text">                                    
+                  <div class="input-field col s12">                                    
                     <select value={this.state.room} onChange={(e)=>this.setState({room:e.target.value})} onInput={this.handleChange} name='room' className="browser-default"> 
                         <option value="" disabled selected> 
                           Class</option> 
@@ -181,7 +181,7 @@ handleChange = (event) => {
                     {errors.ame.length > 0 && 
                 <span className='error'>{errors.ame}</span>} 
                   </div> 
-                  <div class="row green-text" >                  
+                  <div class="input-field col s12" >                  
                       <select value={this.state.division} onInput={(e)=>this.setState({division:e.target.value})} onChange={this.handleChange} name='div' className="browser-default"> 
                         <option value="" disabled selected> 
                           Division</option> 
@@ -195,7 +195,7 @@ handleChange = (event) => {
                     {errors.lName.length > 0 && 
                 <span className='error'>{errors.lName}</span>}
                   </div> 
-
+<div class="input-field col s12" >
                 
     <p>
 
@@ -215,7 +215,7 @@ handleChange = (event) => {
     {errors.llName.length > 0 && 
                 <span className='error'>{errors.llName}</span>}
     
- 
+ </div>
                  
                   <button className="btn waves-effect waves-light right" type="submit" name="action">Submit
                     <i className="material-icons right">send</i>
