@@ -14,7 +14,7 @@ class  App extends React.Component {
     super(props);
     this.state = {
       users:[],
-      id:Math.random()*100000000000000000,
+      id:id,
       
       errors: {
         Name: '',
@@ -61,7 +61,7 @@ class  App extends React.Component {
     if(validateForm(this.state.errors)) {
       
         axios.post(api,{
-          id:id,
+          id:Math.random()*100000000000000000,
           name:this.state.name,
           date:this.state.date,
           room:this.state.room,
@@ -70,7 +70,7 @@ class  App extends React.Component {
 
         }).then(()=>this.getdata())
         console.log("valid form")
-        alert('Student ID='+id+"\r\n"+
+        alert(
         'Student Name='+this.state.name+"\r\n"+
         'Student Date='+this.state.date+"\r\n"+
         'Student Class='+this.state.room+"\r\n"+
