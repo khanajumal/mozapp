@@ -7,14 +7,14 @@ const validateForm = (errors) => {
   );
   return valid;
 }
-var id= Math.random()*100000000000000000;
+var id;
 var api='http://localhost:8080/api/';
 class  App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       users:[],
-      id:id,
+      id:Math.random()*100000000000000000,
       
       errors: {
         Name: '',
